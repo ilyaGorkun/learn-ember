@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  backend_learn-ember:
+    container_name: backend_learn-ember
+    build: ./backend
+    ports:
+      - "${APP_PORT}:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - /usr/src/node_modules/
+      - ./backend:/usr/src
+networks:
+  default:
+    name: learn-ember
