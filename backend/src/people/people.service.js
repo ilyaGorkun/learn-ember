@@ -1,5 +1,7 @@
-class PeopleService {
-
+const getPeople = (part) => {
+    return ['Bob', 'Pit'];
 }
 
-module.exports = PeopleService;
+module.exports = {
+    getPeople
+};
