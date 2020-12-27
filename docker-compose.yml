@@ -1,27 +1,10 @@
 version: "3.7"
 
 services:
-  mongo:
-    image: mongo
-    container_name: mongo
-    restart: unless-stopped
-    env_file: .env
-    environment:
-      MONGODB_USER: "root"
-      MONGODB_DATABASE: "pg"
-      MONGODB_PASS: "root"
-    ports: 
-      - "${MONGO_PORT}:27017"
-    volumes:
-      - data:/data/db
-    networks:
-      - app-network
   backend_learn-ember:
     container_name: backend_learn-ember
     restart: unless-stopped
     build: ./backend
-    depends_on: 
-      - mongo
     ports:
       - "${APP_PORT}:3000"
     env_file:
@@ -31,14 +14,20 @@ services:
     volumes:
       - /usr/src/node_modules/
       - ./backend:/usr/src
-    networks:
-      - app-network
+    links:
+      - mongodb
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    env_file: .env
+    ports: 
+      - "${MONGO_PORT}:27017"
+    volumes:
+      - data:/data/db 
 
 volumes: 
   data:
 
 networks:
-  app-network:
-    driver: bridge
   default:
     name: learn-ember

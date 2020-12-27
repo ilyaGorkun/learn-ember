@@ -6,10 +6,9 @@ const MONGO_HOSTNAME = '127.0.0.1';
 const MONGO_PORT = '27017';
 const MONGO_DB = 'learn-ember';
 const options = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    useNewUrlParser: true
 };
-const url = 'mongodb://127.0.0.1:27017/usersdb';
+const url = 'mongodb://mongodb:27017/pg';
 
 mongoose.connect(url, options).then(() => {
     console.log('MongoDB is connected');
