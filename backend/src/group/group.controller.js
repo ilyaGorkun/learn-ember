@@ -1,16 +1,19 @@
-const createGroup = (people) => {
+const groupService = require('./group.service');
+
+const createGroup = async (users) => {
+    return await groupService.createGroup(users);
 }
 
-const getGroups = () => {
-
+const getGroups = async (page) => {
+    return await groupService.getGroups(page);
 }
 
-const getGroupById = (id) => {
-
+const getGroupByName = async (name) => {
+    return await groupService.getGroupByName(name);
 }
 
 module.exports = {
     createGroup,
     getGroups,
-    getGroupById,
+    getGroupByName,
 }
