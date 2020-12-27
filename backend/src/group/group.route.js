@@ -6,7 +6,7 @@ router.get('/:page', (async (req, res) => {
     res.status(200).send(groupsDto);
 }));
 
-router.get('/users/:name', (async (req, res) => {
+router.get('/:name/users', (async (req, res) => {
     const groupDto = await groupsController.getGroupByName(req.params.name);
     res.status(200).send(groupDto);
 }));
