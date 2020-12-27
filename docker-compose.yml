@@ -1,8 +1,20 @@
 version: "3.7"
 
 services:
+  # mongo:
+  #   image: mongo
+  #   container_name: mongo
+  #   restart: unless-stopped
+  #   env_file: .env
+  #   environment:
+  #      MONGO_INITDB_ROOT_USERNAME: root
+  #      MONGO_INITDB_ROOT_PASSWORD: example
+  #   networks:
+  #     - app-network
   backend_learn-ember:
     container_name: backend_learn-ember
+    # depends_on:
+    #   - mongo
     build: ./backend
     ports:
       - "${APP_PORT}:3000"
@@ -13,6 +25,11 @@ services:
     volumes:
       - /usr/src/node_modules/
       - ./backend:/usr/src
+    networks:
+      - app-network
+
 networks:
+  app-network:
+    driver: bridge
   default:
     name: learn-ember
