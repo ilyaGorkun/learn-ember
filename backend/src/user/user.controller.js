@@ -1,7 +1,7 @@
 const userService = require('./user.service');
 
-const getUsers = async (part) => {
-    const users = await userService.getUsers(part)
+const getUsers = async (page) => {
+    const users = await userService.getUsers(page);
     return users;
 }
 
