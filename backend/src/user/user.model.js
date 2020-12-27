@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { users } = require('../mock/users');
+const { users } = require('./mock/users');
 
 const userSchema = new mongoose.Schema({
     firstName: String,
