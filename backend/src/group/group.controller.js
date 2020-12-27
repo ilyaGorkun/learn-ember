@@ -1,7 +1,7 @@
 const groupService = require('./group.service');
 
-const createGroup = async (users) => {
-    return await groupService.createGroup(users);
+const createGroup = async (group) => {
+    return await groupService.createGroup(group);
 }
 
 const getGroups = async (page) => {
