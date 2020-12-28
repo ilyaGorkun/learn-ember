@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+  }
+  
+  body {
+    color: white;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .wrapper > * {
+  }
+  
+  .page-header {
+
+  }
+  
+  .page-main {
+    flex-grow: 1;
+    background: #331E4D;
+  }
+  
+  .page-footer {
+  }
