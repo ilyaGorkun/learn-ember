@@ -6,12 +6,15 @@ const MONGO_HOSTNAME = '127.0.0.1';
 const MONGO_PORT = '27017';
 const MONGO_DB = 'learn-ember';
 const options = {
-    useNewUrlParser: true
+  useNewUrlParser: true,
 };
 const url = 'mongodb://mongodb:27017/pg';
 
-mongoose.connect(url, options).then(() => {
+mongoose
+  .connect(url, options)
+  .then(() => {
     console.log('MongoDB is connected');
-}).catch((err) => {
+  })
+  .catch((err) => {
     console.log(err);
-});
+  });
