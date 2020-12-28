@@ -1,28 +1,24 @@
-<div class="wrapper">
-    <header class="page-header">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Ember</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    {{#link-to 'users' tagName="li"}}
-                    <a href="users">Users</a>
-                    {{/link-to}}
-                    {{#link-to 'groups' tagName="li"}}
-                    <a href="groups">Groups</a>
-                    {{/link-to}}
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main class="page-main">
-        {{outlet}}
-    </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                </div>
-            </div>
+<div class="app">
+
+    <header class="header">
+        <div class="header__logo__wrapper">
+            <a class="header__logo" href="#">Ember</a>
         </div>
+        <div class="header__menu">
+            {{#link-to 'users'}}
+            <a href="users">Users</a>
+            {{/link-to}}
+            {{#link-to 'groups'}}
+            <a href="groups">Groups</a>
+            {{/link-to}}
+        </div>
+    </header>
+
+    <div class="content">
+        {{outlet}}
+    </div>
+
+    <footer class="footer">
     </footer>
+
 </div>
