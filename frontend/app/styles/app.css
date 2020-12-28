@@ -5,6 +5,10 @@
   body {
     color: white;
   }
+
+  li {
+    color: black;
+  }
   
   .wrapper {
     display: flex;
@@ -21,7 +25,7 @@
   
   .page-main {
     flex-grow: 1;
-    background: #331E4D;
+    padding: 10px;
   }
   
   .page-footer {

@@ -2,11 +2,11 @@
     <header class="page-header">
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" class="brand-logo">Ember</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
+                    {{#link-to 'users' tagName="li"}}
+                    <a href="users">Users</a>
+                    {{/link-to}}
                 </ul>
             </div>
         </nav>
@@ -18,7 +18,6 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-
                 </div>
             </div>
         </div>
