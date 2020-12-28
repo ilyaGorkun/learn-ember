@@ -7,10 +7,4 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.model('User', userSchema);
 
-User.insertMany(users, (err, docs) => {
-    if (err) return console.log(err);
-
-    console.log(docs);
-})
-
 module.exports.User = User;
