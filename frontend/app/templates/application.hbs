@@ -5,8 +5,8 @@
             <a class="header__logo" href="#">Ember</a>
         </div>
         <div class="header__menu">
-            {{#link-to 'user'}}
-            <a href="user">Users</a>
+            {{#link-to 'users'}}
+            <a href="users">Users</a>
             {{/link-to}}
             {{#link-to 'group'}}
             <a href="group">Groups</a>
@@ -15,12 +15,7 @@
     </header>
 
     <div class="content">
-        <button {{action "click"}}>Click</button>
-        <ul>
-            {{#each model as |user|}}
-            <li>{{user.firstName}} {{user.lastName}}</li>
-            {{/each}}
-        </ul>
+        {{outlet}}
     </div>
 
     <footer class="footer">

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    model: function () {
-        return this.get('store').findRecord('user', 1);
-    }
+    // model: function () {
+    //     return this.get('store').findRecord('users', 1);
+    // }
 });
