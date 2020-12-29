@@ -15,10 +15,18 @@
     </header>
 
     <div class="content">
-        {{outlet}}
+        <button {{ action  'getUsers' }}> Read users</button>
+    </div>
+
+    <div>
+        Читать все:
+        <ul>
+            {{#each model as |user| }}
+            <li> {{user.firstName}} </li>
+            {{/each}}
+        </ul>
     </div>
 
     <footer class="footer">
     </footer>
-
 </div>

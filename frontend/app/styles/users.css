@@ -1,0 +1,12 @@
+.users_wrapper {
+    width: 100%;
+    min-height: 100px;
+}
+
+.users_list {
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    padding:10px ;
+    flex-direction: column;
+}
