@@ -1,7 +1,7 @@
 class UserResponseDto {
-  constructor(id, firsName, lastName) {
+  constructor(id, firstName, lastName) {
     this.id = id;
-    this.firsName = firsName;
+    this.firstName = firstName;
     this.lastName = lastName;
   }
 }
