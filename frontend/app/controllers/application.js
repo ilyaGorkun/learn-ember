@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     actions: {
-        getUsers() {
+        click() {
             this.store.findRecord('user', 1).then((user) => {
-                alert(user.get('firstName') + ' ' + user.get('lastName'))
+                console.log(user);
             })
         },
     }

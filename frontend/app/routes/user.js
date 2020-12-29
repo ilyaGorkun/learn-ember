@@ -6,7 +6,4 @@ export default Ember.Route.extend({
             alert('Click');
         }
     },
-    model() {
-        console.log(this.store.find('users',));
-    }
 });
