@@ -1,6 +1,10 @@
 <div class="users_wrapper">
     <div class="users_list">
-
+        <ul>
+            {{#each model as |user|}}
+            <li>{{user.firstName}}</li>
+            {{/each}}
+        </ul>
     </div>
 </div>
 {{outlet}}
