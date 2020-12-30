@@ -1,5 +1,6 @@
 const { Group } = require('./group.module');
 const GroupResponseDto = require('./dto/group.response');
+const GroupsResponseDto = require('./dto/groups.response');
 const UserResponseDto = require('../user/dto/user.response');
 
 const PAGE_SIZE = 10;
@@ -7,7 +8,9 @@ const PAGE_SIZE = 10;
 const getGroups = async (page) => {
   const skip = (page - 1) * PAGE_SIZE;
   const groups = await Group.find({}).skip(skip).limit(PAGE_SIZE);
-  return groups.map((group) => new GroupResponseDto(group.id, group.name));
+  return new GroupsResponseDto(
+    groups.map((group) => new GroupResponseDto(group.id, group.name))
+  );
 };
 
 const getGroupByName = async (name) => {
