@@ -2,9 +2,10 @@
     <div class="groups_list">
         <ul>
             {{#each model as |group|}}
-            {{group-elem name=group.name}}
+            {{#link-to 'group' group}}
+            <li>{{group.name}}</li>
+            {{/link-to}}
             {{/each}}
         </ul>
     </div>
 </div>
-{{outlet}}

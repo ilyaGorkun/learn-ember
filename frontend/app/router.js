@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function () {
   this.route('users', { path: '/users/:page' });
   this.route('groups', { path: '/groups/:page' });
+  this.route('group', { path: '/group/:name' });
 });
 
 export default Router;
