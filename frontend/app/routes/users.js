@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    model() {
-        return this.get('store').query('user', { page: '1' });
+    model(param) {
+        return this.get('store').query('user', { page: param.page || 2 });
     }
 });

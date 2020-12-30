@@ -10,3 +10,11 @@
     padding:10px ;
     flex-direction: column;
 }
+
+.users_page_list {
+    display: flex;
+}
+
+.users_page_list button {
+    margin: 15px;
+}
