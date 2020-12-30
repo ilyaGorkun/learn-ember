@@ -19,10 +19,11 @@ const getGroupByName = async (name) => {
 };
 
 const createGroup = async (groupDto) => {
-  const { name, users } = groupDto;
+  console.log(groupDto);
+  const { name, users } = groupDto.group;
   const group = await Group.create({ name });
   for (const id of users) {
-    await Group.findByIdAndUpdate(group.id, {
+    await Group.findOneAndUpdate(group.id, {
       $push: { users: id },
     });
   }
