@@ -5,8 +5,11 @@
             <a class="header__logo" href="#">Ember</a>
         </div>
         <div class="header__menu">
-            {{#link-to 'users'}}
+            {{#link-to 'users' 1}}
             Users
+            {{/link-to}}
+            {{#link-to 'groups'}}
+            Groups
             {{/link-to}}
         </div>
     </header>
