@@ -16,6 +16,14 @@
     flex-direction: column;
 }
 
+.users_list li {
+    list-style: none;
+}
+
+.users_list li input {
+    cursor: pointer;
+}
+
 .users_page_list {
     display: flex;
 }

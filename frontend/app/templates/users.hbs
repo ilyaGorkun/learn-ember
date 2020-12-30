@@ -6,22 +6,22 @@
     <div class="users_list">
         <ul>
             {{#each model as |user|}}
-            <li>{{user.firstName}} {{user.lastName}}</li>
+            {{user-elem firstName=user.firstName lastName=user.lastName click=(action "addUser" user.id)}}
             {{/each}}
         </ul>
     </div>
     <div class="users_page_list">
         {{#link-to 'users' 1}}
-        <button {{action "clickButton" 1}}>1</button>
+        <button>1</button>
         {{/link-to}}
         {{#link-to 'users' 2}}
-        <button {{action "clickButton" 1}}>2</button>
+        <button>2</button>
         {{/link-to}}
         {{#link-to 'users' 3}}
-        <button {{action "clickButton" 1}}>3</button>
+        <button>3</button>
         {{/link-to}}
         {{#link-to 'users' 4}}
-        <button {{action "clickButton" 1}}>4</button>
+        <button>4</button>
         {{/link-to}}
     </div>
 </div>
