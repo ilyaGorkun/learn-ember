@@ -1,4 +1,5 @@
 @import url('./user.css');
+@import url('./group.css');
 @import url('./components/user-elem.css');
 
 * {

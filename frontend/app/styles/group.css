@@ -1,0 +1,21 @@
+._wrapper {
+    width: 100%;
+    min-height: 100px;
+}
+
+.groups_create_bar {
+    display: flex;
+    padding: 10px;
+}
+
+.groups_list {
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    padding:10px ;
+    flex-direction: column;
+}
+
+.groups_list li {
+    list-style: none;
+}

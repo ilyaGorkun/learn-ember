@@ -1,4 +1,10 @@
-<div>
-    Hello Groups
+<div class="groups_wrapper">
+    <div class="groups_list">
+        <ul>
+            {{#each model as |group|}}
+            {{group.name}}
+            {{/each}}
+        </ul>
+    </div>
 </div>
 {{outlet}}
