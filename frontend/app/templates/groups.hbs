@@ -2,7 +2,7 @@
     <div class="groups_list">
         <ul>
             {{#each model as |group|}}
-            {{#link-to 'group' group}}
+            {{#link-to 'group' group.id}}
             <li>{{group.name}}</li>
             {{/link-to}}
             {{/each}}

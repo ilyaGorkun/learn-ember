@@ -4,7 +4,7 @@ const createGroup = async (group) => await groupService.createGroup(group);
 
 const getGroups = async (page) => await groupService.getGroups(page);
 
-const getGroupByName = async (name) => await groupService.getGroupByName(name);
+const getGroupByName = async (id) => await groupService.getGroupByName(id);
 
 module.exports = {
   createGroup,

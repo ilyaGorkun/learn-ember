@@ -13,12 +13,10 @@ const getGroups = async (page) => {
   );
 };
 
-const getGroupByName = async (name) => {
-  const group = await Group.findOne({ name }).populate('users');
-  const users = group.users.map(
-    (user) => new UserResponseDto(user.id, user.firstName, user.lastName)
-  );
-  return new GroupResponseDto(group.id, group.name, users);
+const getGroupByName = async (id) => {
+  const group = await Group.findById(id).populate('users');
+  const users = group.users.map((user) => user.id);
+  return { group: new GroupResponseDto(group.id, group.name, users) };
 };
 
 const createGroup = async (groupDto) => {

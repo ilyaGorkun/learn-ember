@@ -1,1 +1,6 @@
-{{outlet}}
+<div class="groups_wrapper">
+    {{name}}
+    {{#each model as |group|}}
+    {{group.name}}
+    {{/each}}
+</div>

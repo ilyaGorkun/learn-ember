@@ -4,5 +4,5 @@ export default DS.Model.extend({
     userId: DS.attr('string'),
     firstName: DS.attr('string'),
     lastName: DS.attr('string'),
-    groups: DS.hasMany('group')
+    groups: DS.belongsTo('group')
 });
