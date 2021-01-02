@@ -3,9 +3,8 @@ const GroupResponseDto = require('./dto/group.response');
 const GroupsResponseDto = require('./dto/groups.response');
 const UserResponseDto = require('../user/dto/user.response');
 
-const PAGE_SIZE = 10;
-
-const getGroups = async (page) => {
+const getGroups = async (page, limit) => {
+  const PAGE_SIZE = limit || 10;
   const skip = (page - 1) * PAGE_SIZE;
   const groups = await Group.find({}).skip(skip).limit(PAGE_SIZE);
   return new GroupsResponseDto(

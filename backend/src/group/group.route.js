@@ -2,7 +2,10 @@ const router = require('express').Router();
 const groupsController = require('./group.controller');
 
 router.get('/', async (req, res) => {
-  const groupsDto = await groupsController.getGroups(req.query.page);
+  const groupsDto = await groupsController.getGroups(
+    req.query.page,
+    req.query.limit
+  );
   res.status(200).send(groupsDto);
 });
 
