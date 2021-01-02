@@ -3,7 +3,7 @@ const UserResponseDto = require('./dto/user.response');
 const UsersResponseDto = require('./dto/users.response');
 
 const getUsers = async (page, limit) => {
-  const PAGE_SIZE = limit || 10;
+  const PAGE_SIZE = parseInt(limit);
   const skip = (page - 1) * PAGE_SIZE;
   const users = await User.find({}).skip(skip).limit(PAGE_SIZE);
 
