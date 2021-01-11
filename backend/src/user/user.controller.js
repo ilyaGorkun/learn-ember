@@ -5,6 +5,12 @@ const getUsers = async (page, limit) => {
   return users;
 };
 
+const getUserById = async (id) => {
+  const user = await userService.getUserById(id);
+  return user;
+};
+
 module.exports = {
   getUsers,
+  getUserById,
 };

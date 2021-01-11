@@ -9,4 +9,9 @@ router.get('/', async (req, res) => {
   res.status(200).send(usersDto);
 });
 
+router.get('/:id', async (req, res) => {
+  const userDto = await userController.getUserById(req.params.id);
+  res.status(200).send(userDto);
+});
+
 module.exports = router;
