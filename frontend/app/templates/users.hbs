@@ -11,18 +11,10 @@
         </ul>
     </div>
     <div class="users_page_list">
-        {{#link-to 'users' 1}}
-        <button>1</button>
-        {{/link-to}}
-        {{#link-to 'users' 2}}
-        <button>2</button>
-        {{/link-to}}
-        {{#link-to 'users' 3}}
-        <button>3</button>
-        {{/link-to}}
-        {{#link-to 'users' 4}}
-        <button>4</button>
-        {{/link-to}}
+        <button {{action "setPage" 1}}>1</button>
+        <button {{action "setPage" 2}}>2</button>
+        <button {{action "setPage" 3}}>3</button>
+        <button {{action "setPage" 4}}>4</button>
     </div>
 </div>
 {{outlet}}

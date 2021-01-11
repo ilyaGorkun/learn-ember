@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+    queryParams: ["page", "limit"],
+    page: 1,
+    limit: 10,
     listId: [],
     actions: {
         addUser(id) {
@@ -19,6 +22,9 @@ export default Ember.Controller.extend({
         },
         checkUser(id) {
             return this.listId.includes(id);
+        },
+        setPage(page) {
+            this.set("page", page);
         }
     }
 });
