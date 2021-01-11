@@ -19,3 +19,11 @@
 .groups_list li {
     list-style: none;
 }
+
+.groups_page_list {
+    display: flex;
+}
+
+.groups_page_list button {
+    margin: 15px;
+}
