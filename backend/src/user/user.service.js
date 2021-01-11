@@ -16,7 +16,7 @@ const getUsers = async (page = 1, limit = 10) => {
 
 const getUserById = async (id) => {
   const user = await User.findById(id);
-  return new UserResponseDto(user.id, user.firstName, user.lastName);
+  return { user: new UserResponseDto(user.id, user.firstName, user.lastName) };
 };
 
 module.exports = {

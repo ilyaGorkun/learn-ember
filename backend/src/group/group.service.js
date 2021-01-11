@@ -1,7 +1,6 @@
 const { Group } = require('./group.module');
 const GroupResponseDto = require('./dto/group.response');
 const GroupsResponseDto = require('./dto/groups.response');
-const UserResponseDto = require('../user/dto/user.response');
 
 const getGroups = async (page = 10, limit = 10) => {
   const PAGE_SIZE = parseInt(limit);

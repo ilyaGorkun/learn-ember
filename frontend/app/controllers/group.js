@@ -5,6 +5,6 @@ export default Ember.Controller.extend({
         return this.get('model').get('name');
     }),
     users: Ember.computed('model', function () {
-        console.log(this.get('model').get('users'));
+        return this.get('model').get('users');
     })
 });
