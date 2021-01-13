@@ -1,5 +1,5 @@
 class GroupResponseDto {
-  constructor(id, name, users = undefined) {
+  constructor(id, name, users) {
     this.id = id;
     this.name = name;
     this.users = users;

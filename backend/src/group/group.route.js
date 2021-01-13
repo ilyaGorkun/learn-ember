@@ -15,8 +15,8 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  groupsController.createGroup(req.body);
-  res.status(200).send('Post all groups');
+  const groupDto = groupsController.createGroup(req.body);
+  res.status(200).send(groupDto);
 });
 
 module.exports = router;

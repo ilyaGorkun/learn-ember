@@ -14,10 +14,12 @@ export default Ember.Controller.extend({
         },
         createGroup() {
             const nameGroup = this.get('newNameGroup');
+            const users = this.get('store').peekAll('user').filter((user) => this.listId.includes(user.id)).map((user) => user.id);
+            console.log(users);
             const newGroup = this.get('store').createRecord('group', {
                 name: nameGroup,
-                users: this.get('store').peekAll('user').filter((user) => this.listId.includes(user.id))
-            })
+                users
+            });
             newGroup.save();
         },
         checkUser(id) {
