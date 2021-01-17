@@ -4,12 +4,13 @@ const MAX_SIZE = 100;
 
 const getValueUserGroup = async (groupId) => {
   const users = await UserGroup.find({ groupId });
-  const usersDto = users.map((user) => ({
+  const valuesDto = users.map((user) => ({
+    id: user._id,
     userId: user.userId,
     groupId: user.groupId,
     value: user.value,
   }));
-  return { users: usersDto };
+  return { values: valuesDto };
 };
 
 const createValueForUserGroup = async (userId, groupId) => {

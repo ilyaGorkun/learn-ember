@@ -1,10 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-    name: Ember.computed('model', function () {
-        return this.get('model').get('name');
+    name: Ember.computed('group', function () {
+        return this.get('group').get('name');
     }),
-    users: Ember.computed('model', function () {
-        return this.get('model').get('users');
+    users: Ember.computed('group', function () {
+        return this.get('group').get('users');
+    }),
+    values: Ember.computed('model', function () {
+        return this.get('model').get('values');
     })
 });

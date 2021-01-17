@@ -2,6 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model({ id }) {
-        return this.get('store').peekRecord('group', id);
+        return Ember.RSVP.hash({
+            values: this.get('store').query('value', { groupId: id }),
+            group: this.get('store').findRecord('group', id)
+        })
     },
+    setupController(controller, { values, group }) {
+        controller.setProperties({
+            values,
+        });
+        controller.set('group', group);
+    }
 });

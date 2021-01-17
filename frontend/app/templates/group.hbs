@@ -1,6 +1,11 @@
 <div class="group_wrapper">
     <h2>{{name}}</h2>
     <ul class="group_list">
+        {{#each values key="id" as |value|}}
+        <li>{{value.value}}</li>
+        {{/each}}
+    </ul>
+    <ul class="group_list">
         {{#each users key="id" as |user|}}
         <li>{{user.firstName}} {{user.lastName}}</li>
         {{/each}}
