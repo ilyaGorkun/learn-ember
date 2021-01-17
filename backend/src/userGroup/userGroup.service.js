@@ -6,6 +6,7 @@ const getValueUserGroup = async (groupId) => {
   const users = await UserGroup.find({ groupId });
   const usersDto = users.map((user) => ({
     userId: user.userId,
+    groupId: user.groupId,
     value: user.value,
   }));
   return { users: usersDto };
