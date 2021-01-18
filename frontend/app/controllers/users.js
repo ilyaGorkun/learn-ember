@@ -12,7 +12,6 @@ export default Ember.Controller.extend({
             } else {
                 this.listId.push(id);
             }
-            console.log(this.listId);
         },
         createGroup() {
             if (this.listId.length) {
@@ -24,9 +23,6 @@ export default Ember.Controller.extend({
                 });
                 newGroup.save();
             }
-        },
-        checkUser(id) {
-            return this.listId.includes(id);
         },
         setPage(page) {
             this.set("page", page);
