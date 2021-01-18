@@ -7,16 +7,23 @@ export default Ember.Controller.extend({
     listId: [],
     actions: {
         addUser(id) {
-            this.listId.push(id);
+            if (this.listId.includes(id)) {
+                this.listId = this.listId.filter(elem => elem != id);
+            } else {
+                this.listId.push(id);
+            }
+            console.log(this.listId);
         },
         createGroup() {
-            const nameGroup = this.get('newNameGroup');
-            const users = this.get('store').peekAll('user').filter((user) => this.listId.includes(user.id));
-            const newGroup = this.get('store').createRecord('group', {
-                name: nameGroup,
-                users
-            });
-            newGroup.save();
+            if (this.listId.length) {
+                const nameGroup = this.get('newNameGroup');
+                const users = this.get('store').peekAll('user').filter((user) => this.listId.includes(user.id));
+                const newGroup = this.get('store').createRecord('group', {
+                    name: nameGroup,
+                    users
+                });
+                newGroup.save();
+            }
         },
         checkUser(id) {
             return this.listId.includes(id);

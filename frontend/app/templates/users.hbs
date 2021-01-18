@@ -6,7 +6,7 @@
     <div class="users_list">
         <ul>
             {{#each model as |user|}}
-            {{user-elem firstName=user.firstName lastName=user.lastName click=(action "addUser" user.id)}}
+            {{user-elem firstName=user.firstName lastName=user.lastName id=user.id action="addUser" }}
             {{/each}}
         </ul>
     </div>
