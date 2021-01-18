@@ -1,7 +1,8 @@
 @import url('./user.css');
 @import url('./group.css');
 @import url('./groups.css');
-@import url('./components/user-elem.css');
+
+@import url('./components/pagination-bar.css');
 
 * {
   box-sizing: border-box;

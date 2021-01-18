@@ -1,0 +1,7 @@
+.pagination-bar {
+    display: flex;
+}
+
+.pagination-bar button {
+    margin: 15px;
+}

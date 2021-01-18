@@ -10,12 +10,7 @@
             {{/each}}
         </ul>
     </div>
-    <div class="users_page_list">
-        <button {{action "setPage" 1}}>1</button>
-        <button {{action "setPage" 2}}>2</button>
-        <button {{action "setPage" 3}}>3</button>
-        <button {{action "setPage" 4}}>4</button>
-    </div>
+    {{pagination-bar}}
     <div class="cat_fact">
         {{catFact}}
     </div>
