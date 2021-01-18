@@ -8,9 +8,7 @@ export default Ember.Route.extend({
         })
     },
     setupController(controller, { values, group }) {
-        controller.setProperties({
-            values,
-        });
         controller.set('group', group);
+        controller.set('values', values);
     }
 });

@@ -7,7 +7,7 @@
     </ul>
     <ul class="group_list">
         {{#each users key="id" as |user|}}
-        <li>{{user.firstName}} {{user.lastName}}</li>
+        <li>{{user.fullName}} {{action 'hello'}}</li>
         {{/each}}
     </ul>
 </div>
