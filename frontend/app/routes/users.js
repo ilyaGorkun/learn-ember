@@ -20,6 +20,6 @@ export default Ember.Route.extend({
     },
     setupController(controller, { catFact, users }) {
         controller.set('users', users);
-        console.log(catFact, users);
+        controller.set('catFact', catFact.text);
     }
 });

@@ -5,7 +5,7 @@
     </div>
     <div class="users_list">
         <ul>
-            {{#each model as |user|}}
+            {{#each users as |user|}}
             {{user-elem firstName=user.firstName lastName=user.lastName id=user.id action="addUser" }}
             {{/each}}
         </ul>
@@ -15,6 +15,9 @@
         <button {{action "setPage" 2}}>2</button>
         <button {{action "setPage" 3}}>3</button>
         <button {{action "setPage" 4}}>4</button>
+    </div>
+    <div class="cat_fact">
+        {{catFact}}
     </div>
 </div>
 {{outlet}}

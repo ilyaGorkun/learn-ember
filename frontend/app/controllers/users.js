@@ -5,6 +5,13 @@ export default Ember.Controller.extend({
     page: 1,
     limit: 10,
     listId: [],
+    users: Ember.computed('users', function () {
+        return this.get('users');
+    }),
+    catFact: Ember.computed('users', function () {
+        console.log(this.get('catFact'));
+        return this.get('catFact');
+    }),
     actions: {
         addUser(id) {
             if (this.listId.includes(id)) {
