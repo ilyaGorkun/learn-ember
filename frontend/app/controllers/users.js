@@ -31,7 +31,13 @@ export default Ember.Controller.extend({
                 newGroup.save();
             }
         },
-        setPage(page) {
+        setPage(direction) {
+            if (direction === 'NEXT') {
+                this.set("page", page + 1);
+            }
+            if (direction === 'NEXT') {
+                this.set("page", page + 1);
+            }
             this.set("page", page);
         }
     }
