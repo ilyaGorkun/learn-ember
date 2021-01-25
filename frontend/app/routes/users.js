@@ -12,14 +12,7 @@ export default Ember.Route.extend({
     },
     model(params) {
         const getUsersPromises = this.get('store').query('user', params);
-        const getCatFact = this.get('ajax').request('facts/random');
-        return Ember.RSVP.hash({
-            catFact: getCatFact,
-            users: getUsersPromises
-        });
+        // const getCatFact = this.get('store').findRecord('random');
+        return getUsersPromises;
     },
-    setupController(controller, { catFact, users }) {
-        controller.set('users', users);
-        controller.set('catFact', catFact.text);
-    }
 });

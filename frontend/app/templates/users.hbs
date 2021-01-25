@@ -5,7 +5,7 @@
     </div>
     <div class="users_list">
         <ul>
-            {{#each users as |user|}}
+            {{#each users key="id" as |user|}}
             {{user-elem firstName=user.firstName lastName=user.lastName id=user.id action="addUser" }}
             {{/each}}
         </ul>
